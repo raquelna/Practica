@@ -4,13 +4,12 @@
   width: 100%;
   min-height: 100vh;
   overflow: hidden;
-  background-color: rgba(15, 15, 15, 1);
-  background-image: url('../ng-img/spring.png'), url('../ng-img/angularjs.png');
+  background-color: rgba(52, 73, 94,1.0);
+  background-image: url('../ng-img/inf.png'), url('../ng-img/sala.png');
   background-position: right top, center center;
   background-repeat: no-repeat, no-repeat;
-  background-size: auto 200px, 600px auto;
+  background-size: auto 140px, 800px auto;
 }
-
 
 @media all and (max-width: 768px)
 {

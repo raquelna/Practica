@@ -16,6 +16,10 @@ app.config(['$routeProvider', '$locationProvider',
     {
       templateUrl: GBL_COFG.urlTemplate('about.html')
     })
+    .when('/emoji',
+    {
+      templateUrl: GBL_COFG.urlTemplate('emoji.html')
+    })
     .when('/test-bbdd',
     {
       templateUrl: GBL_COFG.urlTemplate('test-bbdd.html'),

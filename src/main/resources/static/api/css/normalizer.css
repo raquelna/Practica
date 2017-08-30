@@ -24,7 +24,7 @@ html, body
 {
   width: 100%;
   height: 100%;
-  background-color: rgba(250, 250, 250, 1);
+  background-color: rgba(189, 195, 199,1.0);
 }
 
 :focus
@@ -40,12 +40,13 @@ a:link, a:active, a:visited, a:hover
 
 ol, ul, li
 {
-  list-style: none;
+  list-style: square;
   list-style-position: inside;
 }
 
 h1, h2, h3, h4, h5, h6
 {
+  font-family: Arial,Verdana,Helvetica,sans-serif ;
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -66,10 +67,10 @@ body.appLoading::before
 {
   width: 100%;
   height: 100%;
-  background-image: url('../img/loading.gif');
+  background-image: url('../img/cargando.gif');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: auto 80px;
+  background-size: auto 120px;
 }
 
 
@@ -84,14 +85,14 @@ body.appLoading::before
   position: fixed;
   top: 0;
   left: 0;
-  width: 250px;
+  width: 16%;
   height: 100%;
   padding-right: 20px;
-  transition: all 250ms ease-in-out;
-  transform: translateX(-230px);
+  transition: all 300ms ease-in-out;
+  transform: translateX(-200px);
   box-shadow: 0 0 5px rgba(20, 20, 20, 1);
-  background-color: rgba(255, 255, 255, 1);
-  border-right: 1px solid rgba(255, 255, 255, 1);
+  background-color: rgba(149, 165, 166,1.0);
+  border-right: 1px solid rgba(236, 240, 241,1.0);
 }
 
 
@@ -114,17 +115,17 @@ body.appLoading::before
   float: left;
   width: 100%;
   height: auto;
-  padding: 15px 35px 15px 25px;
+  padding: 15px 20px;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  text-overflow: ellipsis; /*puntos suspensivos*/
   text-transform: uppercase;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.15);
+  border-bottom: 1px solid rgba(231, 76, 60,1.0);
 }
 
 #header ul li:last-child
 {
-  border-bottom: 1px solid rgba(50, 50, 50, 0);
+  border-bottom: 1px solid rgba(231, 76, 60,1.0);
 }
 
 #wrapper, #wrapper > div
@@ -181,7 +182,7 @@ body.appLoading::before
   margin-left: -2px;
   width: 4px;
   height: 4px;
-  background-color: rgba(50, 50, 50, 0.75);
+  background-color: rgba(231, 76, 60,1.0);
   border-radius: 100%;
 }
 
@@ -194,6 +195,6 @@ body.appLoading::before
   margin-left: -2px;
   width: 4px;
   height: 40%;
-  background-color: rgba(50, 50, 50, 0.75);
+  background-color: rgba(231, 76, 60,1.0);
   border-radius: 1px;
 }

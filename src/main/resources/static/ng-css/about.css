@@ -32,10 +32,10 @@
   height: 100%;
   margin-right: 30px;
   opacity: 0.75;
-  background-image: url('../ng-img/info.png');
+  background-image: url('../ng-img/info.gif');
   background-position: right center;
   background-repeat:  no-repeat;
-  background-size: contain;
+  background-size: contain; /*para que ocupe el espacio segun el contenido*/
 }
 
 #about > div ul li
