@@ -20,6 +20,11 @@ app.config(['$routeProvider', '$locationProvider',
     {
       templateUrl: GBL_COFG.urlTemplate('emoji.html')
     })
+    .when('/buscador',
+    {
+      templateUrl: GBL_COFG.urlTemplate('buscador.html'),
+      controller: 'ngAppControllerBuscador'
+    })
     .when('/test-bbdd',
     {
       templateUrl: GBL_COFG.urlTemplate('test-bbdd.html'),

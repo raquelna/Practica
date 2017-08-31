@@ -26,8 +26,12 @@
   cursor: pointer;
   padding: 25px;
   text-transform: uppercase;
-  background-color: rgba(255, 255, 255, 1);
-  border: 1px solid rgba(50, 50, 50, 0.15);
+  color: black;
+  font-weight: bold;
+  font-size: medium;
+  background-color: rgba(231, 76, 60,0);
+  border: 1px solid rgba(231, 76, 60,1.0);
+  border-radius: 10%;
 }
 
 #testBBDD > div
