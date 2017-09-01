@@ -1,7 +1,9 @@
+/*****************************
+    DISEÑO LUPA INPUT
+******************************/
 #buscar{
-    padding: 12% 0 0 0;
+    padding: 10% 0 0 0;
 }
-
 #lupa 
 {
     position: relative;
@@ -16,7 +18,6 @@
     -webkit-box-shadow: 4px 4px 12px 2px #383838;
     box-shadow: 4px 4px 12px 2px #383838;
 }
-
 #lupa::before
 {
     content: '';
@@ -31,7 +32,6 @@
     -webkit-box-shadow:inset 0.4px 0.4px 8px 0.2px #383838;
     box-shadow:inset 0.4px 0.4px 8px 0.2px #383838;
 }
-
 #lupa::after
 {
     content: '';
@@ -47,11 +47,110 @@
     -ms-transform: rotate(42deg);
     transform: rotate(42deg);
 }
-#lupa input{
+#lupa input
+{
     float: left;
     clear: both;
     width: 100%;
-    padding: 0 50px 0 0;
+    padding: 0 52px 0 0;
     background: white;
     font-size: 20px
+}
+
+/***************************************
+       DISEÑO ARTICULOS CON IMAGEN
+****************************************/
+#items 
+{
+    padding-top: 20px;
+    width: 100%;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+#items article
+{
+    background: rgba(236, 240, 241,1.0);
+    width: 20%;
+    margin: 2%;
+    padding: 0.4%;
+    overflow: hidden;
+    box-shadow:  1px 1px 2px 2px rgba(50, 50, 50, 0.25);
+}
+@media all and (max-width: 1279px) /*para version pc*/
+{
+  #items article
+  {
+    width: 33.33%;
+  }
+}
+
+@media all and (max-width: 979px) /*para version tablet*/
+{
+  #items article
+  {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 767px) /*para version movil*/
+{
+  #items article
+  {
+    width: 100%;
+  }
+}
+
+#items article section
+{
+    position: relative;
+    float: left;
+    border: 2px solid rgba(127, 140, 141,1.0);
+    background: rgba(236, 240, 241,1.0);
+    width: 100%;
+    height: 100%;
+}
+
+#items article section figure
+{
+    float: left;
+    width: 100%;
+    height: 25vh;
+    min-height: 15vw;
+    border-bottom: 1px solid rgba(50, 50, 50, 0.15);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#buscar #items div p
+{
+    float: left;
+    text-align: justify;
+    font-family: arial, verdana, serif;
+    font-weight: normal;
+    padding: 2%;
+}
+#buscar #items div > h1
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 2%;
+}
+
+#titulo
+{
+    float: left;
+    width: 100%;
+    text-align: center;
+    font-family: verdana;
+    font-size: 28px;
+    text-decoration: underline;
+    padding-top: 2%;
+    
 }
