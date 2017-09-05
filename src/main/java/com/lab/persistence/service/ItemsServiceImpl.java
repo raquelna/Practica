@@ -8,13 +8,20 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class ItemsServiceImpl implements ItemsService {
-    
+
     @Autowired
     ItemsMapper itemsMapper;
 
     @Override
     public List<ItemsModel> itemsService(ItemsModel obj) throws Exception {
         List<ItemsModel> x = itemsMapper.itemsMapper(obj);
+
+        return x;
+    }
+
+    @Override
+    public List<ItemsModel> buscarItemsService(ItemsModel obj) throws Exception {
+        List<ItemsModel> x = itemsMapper.buscarItemsMapper(obj);
 
         return x;
     }

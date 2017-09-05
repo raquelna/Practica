@@ -87,6 +87,10 @@
   {
     width: 33.33%;
   }
+  #lupa
+    {
+        width: 33.33%;
+    }
 }
 
 @media all and (max-width: 979px) /*para version tablet*/
@@ -95,6 +99,10 @@
   {
     width: 50%;
   }
+  #lupa
+    {
+        width: 33.33%;
+    }
 }
 
 @media all and (max-width: 767px) /*para version movil*/
@@ -103,6 +111,10 @@
   {
     width: 100%;
   }
+  #lupa
+    {
+        width: 33.33%;
+    }
 }
 
 #items article section

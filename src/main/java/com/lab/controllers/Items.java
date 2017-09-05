@@ -29,5 +29,17 @@ public class Items {
 
     return x;
   }
+  
+  @ResponseBody
+  @RequestMapping(value = "/buscarItems",
+                  method = RequestMethod.POST,
+                  produces = MediaType.APPLICATION_JSON_VALUE)
+  public List<ItemsModel> buscarItems(@RequestBody ItemsModel obj) throws Exception
+  {
+      System.out.println(obj.getNombre());
+    List<ItemsModel> x = itemsService.buscarItemsService(obj);
+
+    return x;
+  }
     
 }

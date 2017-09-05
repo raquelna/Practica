@@ -16,14 +16,28 @@ public class ItemsMapperImpl implements ItemsMapper {
 
     @Override
     public List<ItemsModel> itemsMapper(ItemsModel obj) throws Exception {
-        List<ItemsModel> x = new ArrayList<>();
+        return this.addItemsModel("SELECT * FROM items");
+    }
 
-        /**
-         * CONECTANDO A LA BBDD.
-         */
+    @Override
+    public List<ItemsModel> buscarItemsMapper(ItemsModel obj) throws Exception {
+        return this.addItemsModel(" SELECT * "
+                                + " FROM items "
+                                + " WHERE (nombre LIKE '%" + obj.getNombre() + "%')"
+                                + " OR (descripcion LIKE '%" + obj.getNombre() + "%')");
+    }
+
+    /**
+     * GENERA UNA LISTA DE OBJETOS TIPO ITEMSMODEL.
+     *
+     * @param String Sql a ejecutar.
+     *
+     * @return Lista de objetos tipo ItemsModel.
+     */
+    private List<ItemsModel> addItemsModel(String sql) throws Exception {
+        List<ItemsModel> listItems = new ArrayList<>();
+
         db.conecta();
-
-        String sql = "SELECT * FROM items where (nombre LIKE '%" + obj.getNombre() + "%')";
 
         ResultSet rs = db.consulta(sql);
         while (rs.next()) {
@@ -34,15 +48,12 @@ public class ItemsMapperImpl implements ItemsMapper {
             item.setDescripcion(rs.getString("descripcion"));
             item.setUrl(rs.getString("url"));
 
-            x.add(item);
+            listItems.add(item);
         }
-        /**
-         * DESCONECTANDO A LA BBDD.
-         */
+
         db.desconecta();
 
-        return x;
+        return listItems;
     }
 
-   
 }
