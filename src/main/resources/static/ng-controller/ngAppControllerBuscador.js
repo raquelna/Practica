@@ -10,6 +10,15 @@ app.controller('ngAppControllerBuscador',
       }
     };
     
+    var msg =
+    {
+      el: document.querySelector('#msg > span'),
+      style:
+      {
+        classNotFound: 'notFound'
+      }
+    };
+    
     
     (function ()
     {
@@ -40,14 +49,17 @@ app.controller('ngAppControllerBuscador',
       {
         $http.post('/buscarItems',
         {
-          nombre: value
+          nombre: value,
+          descripcion:value
         })
         .then(function (response)
         {
           var data = response.data;
           
 
-          $scope.items = data;
+//          $scope.items = data;
+          
+          scopeItems(data);
           
           $scope.resultado = data.length;
 //          console.log(resultado);
@@ -61,6 +73,24 @@ app.controller('ngAppControllerBuscador',
 
       }, timer.buscar.ms);
     };
+    
+    function scopeItems(data)
+    {
+      var length = data.length;
+
+      msg.el.classList.remove(msg.style.classNotFound);
+
+      if (length > 0)
+      {
+        $scope.items = data;
+      }
+      else
+      {
+        msg.el.classList.add(msg.style.classNotFound);
+      }
+
+      $scope.msg = data.length;
+    }
     
 
   }]);

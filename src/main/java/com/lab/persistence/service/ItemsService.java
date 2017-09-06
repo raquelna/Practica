@@ -10,4 +10,5 @@ public interface ItemsService {
 
     public List<ItemsModel> buscarItemsService(ItemsModel obj) throws Exception;
     
+    
 }

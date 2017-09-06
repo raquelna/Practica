@@ -38,7 +38,6 @@ public class ItemsMapperImpl implements ItemsMapper {
         List<ItemsModel> listItems = new ArrayList<>();
 
         db.conecta();
-
         ResultSet rs = db.consulta(sql);
         while (rs.next()) {
             ItemsModel item = new ItemsModel();
