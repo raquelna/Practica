@@ -28,12 +28,12 @@ app.controller('ngAppControllerBuscador',
     })();
     
     
-    
-    
+        
 
     $scope.buscarFn = function (e)
     {
       var value = e.target.value;
+      var color = document.querySelector('#resultado');
       
       $timeout.cancel(timer.buscar.id);
       timer.buscar.id = $timeout(function ()
@@ -45,12 +45,23 @@ app.controller('ngAppControllerBuscador',
         .then(function (response)
         {
           var data = response.data;
+          
 
           $scope.items = data;
+          
+          $scope.resultado = data.length;
+//          console.log(resultado);
+           color.style.color = 'black';
+          if(data.length === 0)
+          {
+              color.style.color = 'red';
+          }
+          
         });
 
       }, timer.buscar.ms);
     };
+    
 
   }]);
 

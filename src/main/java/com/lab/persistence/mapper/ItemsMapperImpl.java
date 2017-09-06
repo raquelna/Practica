@@ -24,7 +24,7 @@ public class ItemsMapperImpl implements ItemsMapper {
         return this.addItemsModel(" SELECT * "
                                 + " FROM items "
                                 + " WHERE (nombre LIKE '%" + obj.getNombre() + "%')"
-                                + " OR (descripcion LIKE '%" + obj.getNombre() + "%')");
+                                + " OR (descripcion LIKE '%" + obj.getDescripcion() + "%')");
     }
 
     /**
