@@ -10,6 +10,8 @@ app.controller('ngAppControllerBuscador',
       }
     };
     
+   /****************************************************************/
+   
     var msg =
     {
       el: document.querySelector('#msg > span'),
@@ -19,6 +21,7 @@ app.controller('ngAppControllerBuscador',
       }
     };
     
+    /****************************************************************/
     
     (function ()
     {
@@ -36,9 +39,8 @@ app.controller('ngAppControllerBuscador',
         
     })();
     
-    
+    /****************************************************************/
         
-
     $scope.buscarFn = function (e)
     {
       var value = e.target.value;
@@ -73,6 +75,8 @@ app.controller('ngAppControllerBuscador',
 
       }, timer.buscar.ms);
     };
+    
+    /****************************************************************/
     
     function scopeItems(data)
     {

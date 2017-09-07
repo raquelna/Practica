@@ -84,11 +84,11 @@
 }
 @media all and (max-width: 1279px) /*para version pc*/
 {
-  #items article
-  {
-    width: 33.33%;
-  }
-  #lupa
+    #items article
+    {
+        width: 33.33%;
+    }
+    #lupa
     {
         width: 33.33%;
     }
@@ -96,11 +96,11 @@
 
 @media all and (max-width: 979px) /*para version tablet*/
 {
-  #items article
-  {
-    width: 50%;
-  }
-  #lupa
+    #items article
+    {
+        width: 50%;
+    }
+    #lupa
     {
         width: 33.33%;
     }
@@ -108,11 +108,11 @@
 
 @media all and (max-width: 767px) /*para version movil*/
 {
-  #items article
-  {
-    width: 100%;
-  }
-  #lupa
+    #items article
+    {
+        width: 100%;
+    }
+    #lupa
     {
         width: 33.33%;
     }
@@ -165,7 +165,7 @@
     font-size: 28px;
     text-decoration: underline;
     padding-top: 2%;
-    
+
 }
 
 #resultado
@@ -176,4 +176,11 @@
     padding-left: 90.4%;
     font-weight: bold;
     font-size: 128%;
+}
+
+.found
+{
+    font-family: arial, verdana, serif;
+    font-size: large;
+    background: rgba(231, 76, 60,0.2);
 }

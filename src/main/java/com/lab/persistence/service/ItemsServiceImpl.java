@@ -55,7 +55,7 @@ public class ItemsServiceImpl implements ItemsService {
      * @return tag generado en html.
      */
     private String patternReplace(String str) {
-        return "<strong class=\"found\">" + str + "</strong>";
+        return "<span class=\"found\">" + str + "</span>";
     }
 
 }
