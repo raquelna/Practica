@@ -1,3 +1,1 @@
-# Spring Boot and Angular JS | STS & NETBEANS 
-
-Este contenido esta destinado para uso didáctico. 
+Proyecto destinado a la realizacion de un buscador. Una página con un menu que te guia a tres páginas distintas, un informe de BBDD, un emoticono realizado en puro html y css y una página que sera el buscador, con un input un css que lo configura de forma que te muestre los elementos de la BBDD correctamente y te haga una busqueda por palbras, etc
